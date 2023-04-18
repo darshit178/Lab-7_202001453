@@ -419,14 +419,14 @@ Test-cases based on Boundary Analysis:
 | Test Case | Expected Output | Test-acse type
 | --------- | --------------- | --------------
 | s1="",s2="" | True | Boundary Case Analysis
-| s1="Man",s2="Manan" | True | Equivalence Partitioning
-| s1="Manan",s2="Manan" | True | Boundary Case Analysis
-| s1="Mand",s2="Manan" | False | Equivalence Partitioning
-| s1="",s2="Manan" | True | Boundary Case Analysis
-| s1="M a",s2="Manan" | False | Boundary Case Analysis
-| s1="ma",s2="Manan" | False | Boundary Case Analysis
+| s1="Dar",s2="Darshit" | True | Equivalence Partitioning
+| s1="Darshit",s2="Darshit" | True | Boundary Case Analysis
+| s1="Dand",s2="Darshit" | False | Equivalence Partitioning
+| s1="",s2="Darshit" | True | Boundary Case Analysis
+| s1="D a",s2="Darshit" | False | Boundary Case Analysis
+| s1="da",s2="Darshit" | False | Boundary Case Analysis
 | s1="Truth",s2="Tbcd" | False | Equivalence Partitioning
-| s1="Manan",s2="" | False | Boundary Case Analysis
+| s1="Darshit",s2="" | False | Boundary Case Analysis
 
 **P5.java**:
 
@@ -466,43 +466,43 @@ Test-cases based on Boundary Analysis:
         }
         @Test
         public void test2() {
-            String s1="Man";
-            String s2="Manan";
+            String s1="Dar";
+            String s2="Darshit";
             assertTrue(newclass.prefix(s1, s2));
         }
         @Test
         public void test3() {
-            String s1="Manan";
-            String s2="Manan";
+            String s1="Darshit";
+            String s2="Darshit";
             assertTrue(newclass.prefix(s1, s2));
         }
         @Test
         public void test4() {
-            String s1="Mand";
-            String s2="Manan";
+            String s1="Dand";
+            String s2="Darshit";
             assertFalse(newclass.prefix(s1, s2));
         }
         @Test
         public void test5() {
             String s1="";
-            String s2="Manan";
+            String s2="Darshit";
             assertTrue(newclass.prefix(s1, s2));
         }
         @Test
         public void test6() {
-            String s1="M a";
-            String s2="Manan";
+            String s1="D a";
+            String s2="Darshit";
             assertFalse(newclass.prefix(s1, s2));
         }
         @Test
         public void test7() {
-            String s1="ma";
-            String s2="Manan";
+            String s1="da";
+            String s2="Darshit";
             assertFalse(newclass.prefix(s1, s2));
         }
         @Test
         public void test8() {
-            String s1="Manan";
+            String s1="Darshit";
             String s2="";
             assertFalse(newclass.prefix(s1, s2));
         }
